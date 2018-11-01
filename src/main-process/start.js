@@ -50,6 +50,10 @@ module.exports = function start (resourcePath, devResourcePath, startTime) {
     app.commandLine.appendSwitch('force-color-profile', colorProfile)
   }
 
+  if(config.get('core.disableHardwareAcceleration')) {
+    app.disableHardwareAcceleration();
+  }
+
   if (handleStartupEventWithSquirrel()) {
     return
   } else if (args.test && args.mainProcess) {

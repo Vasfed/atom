@@ -24,6 +24,12 @@ const configSchema = {
         default: true,
         description: 'Follow symbolic links when searching files and when opening files with the fuzzy finder.'
       },
+      disableHardwareAcceleration: {
+        type: 'boolean',
+        default: false,
+        title: 'Disable hardware acceleration',
+        description: 'Disables GPU acceleration, this may help if you\'re having rendering issues. Same as running with `--disable-gpu`, requires restart to take effect.'
+      },
       disabledPackages: {
         type: 'array',
         default: [],
